@@ -73,7 +73,8 @@ ON `teachers`.`id` = `course_teacher`.`teacher_id`;
 -- 6. Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
 
 SELECT 
-COUNT(DISTINCT(`teachers`.`id`)) AS 'math_teachers'
+DISTINCT
+`teachers`.*
 
 FROM `departments`
 
